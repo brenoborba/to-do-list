@@ -39,20 +39,70 @@ body{
 } 
 
 .wrapper-list ul.list li{
+    position: relative;
     background-color: #262e4c;
     border-bottom: 1px solid #1c2340;
     color: #b1b2c9;
     display: flex;
     align-items: center;
     padding: 20px;
+    transition: background-color 300ms ease;
+}
+
+.wrapper-list ul.list li:hover{
+    background-color: #323b5c; 
+}
+
+.wrapper-list ul.list li:hover button.remove{
+    opacity: 1;
 }
 
 .wrapper-list ul.list .check{
     background-color: #404a6e;
     border-radius: 50%;
-    display: block;
     width: 20px;
     height: 20px;
     margin-right: 20px;
     cursor: pointer;
+    transition: background-color 200ms ease;
+}
+
+.wrapper-list ul.list .check:hover{
+    background-color: #171d37;
+}
+
+.wrapper-list button.remove{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: none;
+    outline: none;
+    background-color: red;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 300ms ease;
+}
+
+.wrapper-list button.remove:after{
+    content: 'x';
+    color: white;
+    display: block;
+}
+
+.todolist footer{
+    background-color: #171d37;
+}
+
+.todolist footer input{
+    background-color: #171d37;
+    border: none;
+    outline: none;
+    width: 90%;
+    padding: 20px;
+    font-family: "Roboto Condensed", Aria, sans-serif;
+    font-size: 1.2em;
+    color: white;
 }
